@@ -30,6 +30,8 @@ app.configure('production', function(){
 // Routes
 
 app.get('/', routes.index);
+
+//required for Heroku
 var port = process.env.PORT || 3000;
 
 app.listen(port);
