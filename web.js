@@ -1,12 +1,11 @@
-var express = require('express');
+var express = require('express'),
+    app = express.createServer();
 
-var app = express.createServer(express.logger());
+app.use(express.logger());
 
-app.get('/', function(request, response) {
-  response.send('Hello World!');
+app.get('/', function(req, res){
+    res.send('Hello World');
 });
 
-var port = process.env.PORT || 3000;
-app.listen(port, function() {
-  console.log("Listening on " + port);
-});
+app.listen();
+console.log('Express server started on port %s', app.address().port);
