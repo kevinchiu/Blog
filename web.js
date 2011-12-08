@@ -8,4 +8,5 @@ app.get('/', function(req, res){
 });
 
 app.listen();
-console.log('Express server started on port %s', app.address().port);
+ar port = process.env.PORT || 3000;
+console.log('Express server started on port %s', port);
